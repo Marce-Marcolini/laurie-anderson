@@ -1,7 +1,37 @@
 body {
   background-image: url("../fondo.png");
-  font-family: "Abel", serif; /* Conectada la tipografía solicitada */
+  font-family: "Abel", sans-serif; /* Conectada la tipografía solicitada */
 }
+
+.contenedor-columnas {
+  display: flex; /* Activa el modo Flexbox */
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.columna {
+  flex: 1;
+  background-color: #a4ecf1;
+  padding: 20px;
+}
+.columna img {
+  width: 100%;
+  height: auto; /* Mantiene la proporción para que no se deforme */
+  display: block; /* Elimina un espacio en blanco que los navegadores dejan abajo por defecto */
+}
+
+.columna1 {
+  flex: 2; /* columna más ancha pag 2 */
+  background-color: #a4ecf1;
+}
+
+.columna2 {
+  flex: 1; /* columna más angosta pág 2-Obras */
+  background-color: #a4ecf1;
+}
+
 header {
   background-color: aquamarine;
   margin: 1em auto 1em auto;
@@ -22,6 +52,19 @@ main {
   padding: 20px;
   box-sizing: border-box;
 }
+.imagen1 {
+  width: 100%; /* Obliga a la imagen a ocupar todo el ancho de su columna */
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.imagen {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 footer {
   background-color: cadetblue;
   margin: 1em auto 1em auto;
