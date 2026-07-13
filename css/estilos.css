@@ -1,10 +1,10 @@
 body {
-  background-image: url("../fondo.png");
+  background-image: url("../fondo.png"); /* imagen de fondo  solicitada */
   font-family: "Abel", sans-serif; /* Conectada la tipografía solicitada */
 }
 
 .contenedor-columnas {
-  display: flex; /* Activa el modo Flexbox */
+  display: flex; /* Activa el Flexbox */
   gap: 20px;
   width: 100%;
   box-sizing: border-box;
@@ -23,12 +23,12 @@ body {
 }
 
 .columna1 {
-  flex: 2; /* columna más ancha pag 2 */
+  flex: 2; /* columna más ancha pag 2 y 3 */
   background-color: #a4ecf1;
 }
 
 .columna2 {
-  flex: 1; /* columna más angosta pág 2-Obras */
+  flex: 1; /* columna más angosta pág 2 y 3 */
   background-color: #a4ecf1;
 }
 
@@ -52,8 +52,98 @@ main {
   padding: 20px;
   box-sizing: border-box;
 }
+/* Estilos para el formulario */
+form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+fieldset {
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+legend {
+  font-weight: bold;
+  color: #07468e;
+  padding: 0 10px;
+  font-size: 13pt;
+  text-transform: uppercase;
+}
+
+/* Estructura de los campos de entrada */
+label {
+  display: inline-block;
+  width: 180px;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 250px;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: #0056b3;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 86, 179, 0.2);
+}
+
+hr {
+  border: 0;
+  border-top: 2px dashed #05486f;
+  margin: 20px 0;
+}
+
+/* Botones */
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#btn-calcular {
+  background-color: #0056b3;
+  color: white;
+}
+
+#btn-calcular:hover {
+  background-color: #004085;
+}
+
+#btn-reiniciar {
+  background-color: #6c757d;
+  color: white;
+  margin-top: 20px;
+}
+
+#btn-reiniciar:hover {
+  background-color: #5a6268;
+}
+
+/* Contenedor de Resultados (Dashboard) */
+.Resultados {
+  margin-top: 30px;
+  color: #2c3e50;
+  font-size: 1.2rem;
+}
+
 .imagen1 {
-  width: 100%; /* Obliga a la imagen a ocupar todo el ancho de su columna */
+  width: 100%;
   height: auto;
   display: block;
   object-fit: cover;
@@ -63,6 +153,13 @@ main {
   width: 100%;
   height: auto;
   display: block;
+}
+/* imagen en la columna1 */
+.columna1 imagen2 {
+  width: 50%;
+  height: auto;
+  display: block;
+  object-position: center;
 }
 
 footer {
