@@ -20,22 +20,121 @@
       </nav>
     </header>
 
-    <main class="contenedor">
-      <section class="video">
-        <h2>Entrevista</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/zHT016FbR30?si=v3rrFdP2TKCa-8GO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </section>
+    <main class="contenedor-columnas">
+      <!-- COLUMNA 1: FORMULARIO -->
+      <div class="columna1">
+        <div class="imagen2">
+          <img src="../imagenes/anderson-4.png" alt="Laurie Anderson" />
+        </div>
 
-      <section class="grabaciones">
-        <h2>Grabaciones Digitales</h2>
-        <ul>
-          <li><a href="https://www.youtube.com/watch?v=Z0GFRcFm-aY" target="_blank">O Superman (1981)</a></li>
-          <li><a href="https://www.youtube.com/watch?v=3JZ4pnNtyxQ" target="_blank">Big Science (1982)</a></li>
-          <li><a href="https://www.youtube.com/watch?v=5qap5aO4i9A" target="_blank">United States Live (1984)</a></li>
-          <li><a href="https://www.youtube.com/watch?v=6v2L2UGZJAM" target="_blank">Home of the Brave (1986)</a></li>
-          <li><a href="https://www.youtube.com/watch?v=8V20g7k8X0E" target="_blank">The Ugly One with the Jewels (1995)</a></li>
-        </ul>
+        <form id="form-repositorio">
+          <h2>Repositorio de Obras Digitales de Laurie</h2>
+
+          <fieldset>
+            <legend>Registro de Obras Musicales (Max 3)</legend>
+
+            <!-- Obra 1 -->
+            <h3>Obra 1</h3>
+            <label for="nombre-obra-1">Nombre de la obra:</label>
+            <input
+              type="text"
+              id="nombre-obra-1"
+              name="nombre_obra_1"
+              required
+            /><br />
+            <label for="duracion-obra-1">Duración (min):</label>
+            <input
+              type="number"
+              id="duracion-obra-1"
+              name="duracion_obra_1"
+              required
+            /><br />
+            <label for="peso-obra-1">Peso del archivo (MB):</label>
+            <input
+              type="number"
+              id="peso-obra-1"
+              name="peso_obra_1"
+              required
+            /><br />
+            <hr />
+
+            <!-- Obra 2 -->
+            <h3>Obra 2</h3>
+            <label for="nombre-obra-2">Nombre de la obra:</label>
+            <input
+              type="text"
+              id="nombre-obra-2"
+              name="nombre_obra_2"
+              required
+            /><br />
+            <label for="duracion-obra-2">Duración (min):</label>
+            <input
+              type="number"
+              id="duracion-obra-2"
+              name="duracion_obra_2"
+              required
+            /><br />
+            <label for="peso-obra-2">Peso del archivo (MB):</label>
+            <input
+              type="number"
+              id="peso-obra-2"
+              name="peso_obra_2"
+              required
+            /><br />
+            <hr />
+
+            <!-- Obra 3 -->
+            <h3>Obra 3</h3>
+            <label for="nombre-obra-3">Nombre de la obra:</label>
+            <input
+              type="text"
+              id="nombre-obra-3"
+              name="nombre_obra_3"
+              required
+            /><br />
+            <label for="duracion-obra-3">Duración (min):</label>
+            <input
+              type="number"
+              id="duracion-obra-3"
+              name="duracion_obra_3"
+              required
+            /><br />
+            <label for="peso-obra-3">Peso del archivo (MB):</label>
+            <input
+              type="number"
+              id="peso-obra-3"
+              name="peso_obra_3"
+              required
+            /><br />
+          </fieldset>
+          <br />
+
+          <button type="submit" id="btn-calcular">Submit</button>
+        </form>
+      </div>
+
+      <!-- COLUMNA 2: RESULTADOS -->
+      <div class="columna2">
+        <h4 class="Resultados">Resultados del Análisis del Repositorio</h4>
+
+        <div id="resultados">
+          <p>Duración Total: <span id="res-total">--</span></p>
+          <p>Promedio: <span id="res-promedio">--</span></p>
+          <p>Obra más larga: <span id="res-mayor">--</span></p>
+          <p>Tiempo transferencia: <span id="res-transferencia">--</span></p>
+          <p>Presupuesto anual: <span id="res-presupuesto">--</span></p>
+        </div>
+        <button id="btn-reiniciar" disabled>Reiniciar</button>
+
+        <br />
+
+        <!-- atributo disabled empieza desactivado -->
+        <button type="button" id="btn-reiniciar" disabled>
+          Reiniciar Repositorio
+        </button>
+      </div>
     </main>
+
     <footer>
       <p>
         Para contactarse con Laurie escribir a:<a
@@ -44,7 +143,9 @@
         ><br />
         &copy; 2024 Laurie Anderson Fan Page. Todos los derechos reservados.
       </p>
-      
     </footer>
+
+    <!-- conecta con el archivo js -->
+    <script src="script1.js"></script>
   </body>
 </html>
